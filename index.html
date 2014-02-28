@@ -6,6 +6,12 @@
 -->
 <html>
 	<head>
+    <script>$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});</script>
 		<title>Nolan Snoeyink</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
