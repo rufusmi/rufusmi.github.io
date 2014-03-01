@@ -6,58 +6,7 @@
 -->
 <html>
 	<head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
-    <script>$(document).ready(function() {
-  function filterPath(string) {
-  return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
-  }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
- 
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
-      if (target) {
-        var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
-            location.hash = target;
-          });
-        });
-      }
-    }
-  });
- 
-  // use the first element that is "scrollable"
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
-        }
-      }
-    }
-    return [];
-  }
- 
-});</script>
-
-	<title>Nolan Snoeyink</title>
+    	<title>Nolan Snoeyink</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -83,27 +32,27 @@
 					<div id="header" class="container">
 						
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Nolan Snoeyink</a></h1>
+							<h1 id="logo"><a href="index.html">The Cell Project</a></h1>
 						
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
 									<li>
-										<a href="">Dropdown</a>
+										<a href="">Lessons</a>
 										<ul>
-											<li><a href="#">Lorem ipsum dolor</a></li>
-											<li><a href="#">Magna phasellus</a></li>
-											<li><a href="#">Etiam dolore nisl</a></li>
+											<li><a href="#">One</a></li>
+											<li><a href="#">Two</a></li>
+											<li><a href="#">Three</a></li>
 											<li>
 												<span>Phasellus consequat</span>
 												<ul>
-													<li><a href="#">Lorem ipsum dolor</a></li>
-													<li><a href="#">Phasellus consequat</a></li>
-													<li><a href="#">Magna phasellus</a></li>
-													<li><a href="#">Etiam dolore nisl</a></li>
+													<li><a href="#">One</a></li>
+													<li><a href="#">Two</a></li>
+													<li><a href="#">Three</a></li>
+													<li><a href="#">Four</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Veroeros feugiat</a></li>
+											<li><a href="#">Five</a></li>
 										</ul>
 									</li>
 									<li><a href="left-sidebar.html">Left Sidebar</a></li>
